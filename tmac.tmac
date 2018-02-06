@@ -34,18 +34,31 @@
 .br
 ..
 .
+.
 .de HD
+.ps 12
+.vs 14
+.
 .if \\n%>=\\n(NS&\\n(UN>0 \{\
 '	sp 1c-0.5v
 .	tl ''- % -''\}
 'sp |\\n(UFu
+.
+.ps
+.vs
 ..
 .
 .de FO
+.ps 12
+.vs 14
+.
 .if \\n%>=\\n(NS&\\n(DN>0 \{\
 '	sp 1c-0.5v
 .	tl ''- % -''\}
 'bp
+.
+.ps
+.vs
 ..
 .
 .wh 0 HD
@@ -87,9 +100,9 @@
 \\h'3p'\\
 \\$2\}
 .ie \\n(.$=3 \{\
-.nr IN 15p
+.	nr IN 15p
+.	while (\\w'\\$1'u)>=(\\n(INu-2p) .nr IN +15p
 .
-.while (\\w'\\$1'u)>=(\\n(INu-2p) .nr IN +15p
 \\$1\\
 \\h'\\n(INu-\\w'\\$1'u'\\
 \\$2\\
