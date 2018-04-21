@@ -34,31 +34,49 @@
 .br
 ..
 .
+.de H3
+.br
+\\s+2\\fB\\$1\\fP\\s-2
+.br
+..
+.
 .
 .de HD
+.nr PS \\n(.s
+.nr VS \\n(.v
+.ds FT \\n[.fam]
 .ps 12
 .vs 14
+.fam T
 .
 .if \\n%>=\\n(NS&\\n(UN>0 \{\
 '	sp 1c-0.5v
 .	tl ''- % -''\}
-'sp |\\n(UFu
 .
-.ps
-.vs
+.fam \\*(FT
+.ps \\n(PS
+.vs \\n(VSu
+.
+'sp |\\n(UFu
 ..
 .
 .de FO
+.nr PS \\n(.s
+.nr VS \\n(.v
+.ds FT \\n[.fam]
 .ps 12
 .vs 14
+.fam T
 .
 .if \\n%>=\\n(NS&\\n(DN>0 \{\
 '	sp 1c-0.5v
 .	tl ''- % -''\}
-'bp
 .
-.ps
-.vs
+.fam \\*(FT
+.ps \\n(PS
+.vs \\n(VSu
+.
+'bp
 ..
 .
 .wh 0 HD
